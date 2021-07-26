@@ -124,26 +124,26 @@ change_usage = c(dec.more.6, dec.5.6, dec.3.4,
 labels = c('Decreased By >6','Decreased 5-6', "Decreased 3-4", 
            "Decreased 1-2", "No Change", "Increased by 1-2", 
            "Increased by 3-4", "Increased by 5-6", "Increased by >6")
+
 values = change_usage
 
 pie2 <- plot_ly(type='pie', labels=labels, values=values, 
-               textinfo='label+percent',
-               marker = list(colors = c("#251616", "#FF6961", "#C63F3F", 
-                                        "#E28073", "#760000", "#F1D3CF", 
-                                        "#E28073", "FF9586", "D84742")),
-               insidetextorientation='horizontal')
+                textinfo='label+percent',
+                marker = list(colors = c("#251616", "#FF6961", "#C63F3F", 
+                                         "#E28073", "#760000", "#F1D3CF", 
+                                         "#E28073", "FF9586", "D84742")),
+                insidetextorientation='horizontal', textfont = list(size = 18))
 
 k <- list(
-  l = 40,
-  r = 40,
-  b = 120,
-  t = 70,
+  l = 30,
+  r = 30,
+  b = 150,
+  t = 80,
   pad = 0
 ) # Creating margins
 
 pie2 <- pie2 %>% layout(title="Change in Time Spent (Hrs/Day) on Social Media Since Pandemic", 
-                        font=t, titlefont=list(size=30), margin = k) # Applying layout
-
+                        font=t, titlefont=list(size=30), margin = k, legend = list(x = 0.78, y = 0.9, font = list(size = 18))) # Applying layout
 
 # Side-to-Side Barplot---------------------------------------------------------------------------
 
